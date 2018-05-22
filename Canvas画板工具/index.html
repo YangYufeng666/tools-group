@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Canvas画板工具</title>
+		<link type="text/css" rel="stylesheet" href="css/CanvasDrawingTools.css">
+	</head>
+	<body>
+	<div class="box">
+        <div class="title">画板工具</div>
+        <div class="setting">
+            <span class="text">颜色</span>
+            <a href="javascript:void(0);" class="color black active"  data-color="black"></a>
+            <a href="javascript:void(0);" class="color red" data-color="red"></a>
+            <a href="javascript:void(0);" class="color blue" data-color="blue"></a>
+            <a href="javascript:void(0);" class="color pink"  data-color="pink"></a>
+            <span class="text">线条</span>
+            <a href="javascript:void(0);" class="bold active" data-bold="4">4</a>
+            <a href="javascript:void(0);" class="bold" data-bold="8">8</a>
+            <a href="javascript:void(0);" class="bold" data-bold="12">12</a>
+            <a href="javascript:void(0);" class="bold" data-bold="16">16</a>
+            <span class="text">操作</span>
+            <a href="javascript:void(0);" class="brush pen active" title="点击绘画">画</a>
+            <a href="javascript:void(0);" class="brush eraser" title="点击擦除">擦</a>
+            <a href="javascript:void(0);" class="brush empty" title="点击清空" >清</a>
+
+        </div>
+        <canvas id="myCanvas" width="700" height="400"></canvas>
+    </div>
+	<script type="text/javascript" src="js/CanvasDrawingTools.js"></script>
+	</body>
+</html>

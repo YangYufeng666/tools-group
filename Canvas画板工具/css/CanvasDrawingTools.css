@@ -1,0 +1,68 @@
+html,body,canvas,div,span,a{
+    margin: 0 auto;
+    padding: 0px;
+    text-decoration: none;
+}
+body{
+    font-family: "微软雅黑", "宋体";
+    background-color: #000;
+}
+.box{
+    width: 710px;
+    border: 5px solid #ddd;
+    margin-top: 30px;
+    background-color: #fff;
+
+}
+.box .title{
+    text-align: center;
+    background-color: #f90;
+    color: #fff;
+    font-size:25px;
+}
+.setting{
+    color: #333;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-color: #eee;
+}
+.setting .text{
+    float: left;
+    width: 34px;
+    height: 34px;
+    line-height: 30px;
+    margin-left: 10px;
+}
+.setting .color,.setting .bold,.setting .brush{
+    float: left;
+    width: 30px;
+    height: 30px;
+    /*display: inline-block;*/
+    margin-left: 10px;
+    border: 2px solid #fff;
+    transition: all 0.2s;
+}
+.red{
+    background: red;
+}
+.blue{
+    background-color: blue;
+}
+.black{
+    background-color: black;
+}
+.pink{
+    background-color: pink;
+}
+.setting .bold,.setting .brush{
+    color: #1b1b1b;
+}
+canvas{
+    cursor: pointer;
+}
+.setting .active{
+    border-color:#aaaaaa;
+}

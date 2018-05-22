@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>表单验证插件</title>
+    <link rel="stylesheet" type="text/css" href="css/form.css">
+</head>
+<body>
+<bgsound src="music/bgMusic.mp3">
+<div class="container">
+    <!--
+        data-notempty="true"
+        data-notempty-message="不能为空"
+
+        data-regex="正则表达式"
+        data-regex-massage="格式不匹配"
+
+        data-equalto="目标选择器"
+        data-equalto-massage="与目标不一致"
+    -->
+    <form id="html5Form" method="post">
+        <div class="form-group">
+            <label>用户名</label>
+            <div class="col">
+                <input id="username" type="text" name="userName" maxlength="25"
+                       data-notempty="true"
+                       data-notempty-message="不能为空"
+                       data-regex="^\w+$"
+                       data-regex-message="格式不匹配,用户名由数字字母下划线组成">
+            </div>
+        </div>
+        <div class="form-group">
+            <label>密码</label>
+            <div class="col">
+                <input  id="password" type="password" name="passWord"
+                        maxlength="16"
+                       data-notempty="true"
+                       data-notempty-message="不能为空"
+                >
+            </div>
+        </div>
+        <div class="form-group">
+            <label>确定密码</label>
+            <div class="col">
+                <input type="password" name="rePwd"
+                       maxlength="16"
+                       data-notempty="true"
+                       data-notempty-message="不能为空"
+                       data-equalto="#password"
+                       data-equalto-message="两次密码不一致"
+                >
+            </div>
+        </div>
+        <div class="align-center">
+            <input class="button" type="button" value="注册">
+            <input class="button" type="reset" name="重置">
+        </div>
+    </form>
+</div>
+<script type="text/javascript" src="js/jquery/jquery-2.1.4.min.js"></script>
+<script type="text/javascript" src="js/form.js"></script>
+<script type="text/javascript">
+    $(document).ready(function(){
+        $("#html5Form").formValidator();
+    });
+</script>
+</body>
+</html>
